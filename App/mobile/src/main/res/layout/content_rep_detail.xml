@@ -42,8 +42,14 @@
 
         </LinearLayout>
 
-
     </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:textSize="16dp"
+        android:text="Latest Tweet: Hi I am a tweet!"/>
 
     <TextView
         android:layout_width="match_parent"
