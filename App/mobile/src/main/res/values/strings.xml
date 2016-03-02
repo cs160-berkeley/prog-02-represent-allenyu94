@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Represent</string>
+
+    <!-- Activity Names -->
+    <string name="reps_activity">Representatives Found</string>
+    <string name="rep_details_activity">Representative Details</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

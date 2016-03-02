@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="7"
+    tools:context="com.yu.allen.represent.MainActivity"
+    tools:deviceIds="wear_round">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4">
+
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="65dp"
+            android:background="@drawable/redblue"/>
+
+        <TextView
+            android:id="@+id/democrat_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:paddingTop="60dp"
+            android:paddingLeft="45dp"
+            android:textSize="20dp"
+            android:text="50%"/>
+
+        <TextView
+            android:id="@+id/obama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="85dp"
+            android:paddingLeft="36dp"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:text="Obama"/>
+
+        <TextView
+            android:id="@+id/republican_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingTop="60dp"
+            android:paddingRight="45dp"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="50%"/>
+
+        <TextView
+            android:id="@+id/romney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingTop="85dp"
+            android:paddingRight="36dp"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:text="Romney"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:layout_weight="3">
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/black"
+            android:text="2012 Presidential Vote"/>
+
+        <TextView
+            android:id="@+id/text_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_title"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="40dp"
+            android:textColor="@color/black"
+            android:text="State"/>
+
+        <TextView
+            android:id="@+id/text_county"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_title"
+            android:layout_alignParentRight="true"
+            android:paddingRight="65dp"
+            android:textColor="@color/black_54p"
+            android:text="County"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
