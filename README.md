@@ -1,20 +1,16 @@
 # PROG 02: Represent!
 
-Briefly describe your app here.
+App to help find Representatives by Location. 
 
 ## Authors
 
-FirstName LastName ([your_email@berkeley.edu](mailto:your_email@berkeley.edu))
+Chung-Hao Yu ([allen.yu@berkeley.edu](mailto:allen.yu@berkeley.edu))
 
 ## Demo Video
 
-See [your demo video title here] (https://link_to_your_video)
+See [Allen Yu Represent Demo Video] (https://vimeo.com/157421864)
 
 ## Screenshots
 
-<img src="screenshots/main.png" height="400" alt="Screenshot"/>
-
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Any other support
