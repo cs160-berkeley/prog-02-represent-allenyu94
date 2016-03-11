@@ -5,16 +5,9 @@
     android:gravity="center"
     android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/rep_image"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:padding="10dp"
-        android:src="@drawable/barbara_lee"/>
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
@@ -24,19 +17,42 @@
             android:paddingTop="5dp"
             android:fontFamily="sans-serif-condensed-light"
             android:lineSpacingExtra="-4sp"
-            android:textSize="16sp"
+            android:textSize="10sp"
             android:text="Barbara Lee"/>
 
         <TextView
-            android:id="@+id/house"
+            android:id="@+id/party"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
+            android:layout_toRightOf="@id/name"
+            android:paddingTop="5sp"
+            android:paddingLeft="10sp"
+            android:lineSpacingExtra="-4sp"
+            android:textSize="10sp"
+            android:text="Democrat"/>
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-light"
+            android:layout_below="@id/name"
+            android:lineSpacingExtra="-4sp"
+            android:textSize="10sp"
+            android:text="email@email.com"/>
+
+        <TextView
+            android:id="@+id/website"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="5dp"
             android:fontFamily="sans-serif-condensed-light"
+            android:layout_below="@id/email"
             android:lineSpacingExtra="-4sp"
-            android:textSize="14sp"
-            android:text="Democrat"/>
+            android:textSize="10sp"
+            android:text="website.com"/>
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </com.yu.allen.represent.RepsFoundItemLayout>

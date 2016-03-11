@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="120dp" android:background="@color/softTurquoise" android:padding="10dp">
+    android:layout_width="match_parent" android:layout_height="120dp" android:descendantFocusability="blocksDescendants" android:background="@color/mainTurquoise" android:padding="10dp">
 
     <ImageView
         android:id="@+id/reps_found_item_img"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_alignParentStart="true"
         android:src="@drawable/barbara_lee"/>
 
@@ -22,22 +22,34 @@
             android:id="@+id/reps_found_item_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18dp"
-            android:text="Barbara Lee" />
+            android:textSize="16dp"
+            android:text="Barbara Lee"
+            android:textColor="@color/white"/>
 
         <TextView
             android:id="@+id/reps_found_item_house"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18dp"
-            android:text="Democrat" />
+            android:textSize="14dp"
+            android:text="Democrat"
+            android:textColor="@color/white"/>
 
         <TextView
             android:id="@+id/reps_found_item_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="18dp"
-            android:text="primaryemail@email.com"/>
+            android:textSize="14dp"
+            android:text="primaryemail@email.com"
+            android:autoLink="email"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/reps_found_item_website"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="primarywebsite.com"
+            android:autoLink="web"
+            android:textColor="@color/white"/>
 
     </LinearLayout>
 

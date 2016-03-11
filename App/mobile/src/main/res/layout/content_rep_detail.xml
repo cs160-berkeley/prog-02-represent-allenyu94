@@ -1,82 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent" android:background="@color/mainTurquoise">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent" android:layout_height="120dp" android:background="@color/softTurquoise" android:padding="10dp">
+        android:layout_width="match_parent" android:layout_height="120dp" android:background="@color/mainTurquoise" android:padding="10dp">
 
         <ImageView
-            android:id="@+id/reps_found_item_img"
+            android:id="@+id/reps_detail_item_img"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_alignParentStart="true"
             android:src="@drawable/barbara_lee"/>
 
         <LinearLayout
-            android:id="@+id/reps_found_item_desc"
+            android:id="@+id/reps_detail_item_desc"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@id/reps_found_item_img"
+            android:layout_toRightOf="@id/reps_detail_item_img"
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/reps_detail_item_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18dp"
-                android:text="Barbara Lee" />
+                android:textSize="16dp"
+                android:text="Barbara Lee"
+                android:textColor="@color/white"/>
 
             <TextView
+                android:id="@+id/reps_detail_item_party"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18dp"
-                android:text="Democrat" />
+                android:textSize="14dp"
+                android:text="Democrat"
+                android:textColor="@color/white"/>
 
             <TextView
+                android:id="@+id/reps_detail_item_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18dp"
-                android:text="end date: 02/28/16"/>
+                android:textSize="14dp"
+                android:text="end date: 2017-01-03"
+                android:textColor="@color/white"/>
 
         </LinearLayout>
 
     </RelativeLayout>
 
     <TextView
+        android:id="@+id/reps_detail_item_tweet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="15dp"
-        android:textSize="16dp"
-        android:text="Latest Tweet: Hi I am a tweet!"/>
+        android:padding="10dp"
+        android:textSize="12dp"
+        android:text="On #InternationalWomensDay &amp;amp; every day, Congress must work to advance #humanrights and justice. We deserve #equality"
+        android:background="#5a9b95"/>
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="15dp"
-        android:textSize="22dp"
-        android:text="Committees" />
+        android:background="@color/mainTurquoise">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textSize="16dp"
+            android:text="Committees"
+            android:textColor="@color/white"/>
+
+        <ToggleButton
+            android:id="@+id/toggle_committees"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textOff="Show"
+            android:textOn="Hide"/>
+    </RelativeLayout>
 
     <ListView
         android:id="@+id/rep_details_committees_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="#5a9b95">
     </ListView>
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="15dp"
-        android:textSize="22dp"
-        android:text="Recently Sponsored Bills"/>
+        android:background="@color/mainTurquoise">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textSize="16dp"
+            android:text="Recently Sponsored Bills"
+            android:textColor="@color/white"/>
+
+        <ToggleButton
+            android:id="@+id/toggle_bills"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textOff="Show"
+            android:textOn="Hide"/>
+
+    </RelativeLayout>
 
     <ListView
         android:id="@+id/rep_details_bills_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="#5a9b95">
     </ListView>
 
 </LinearLayout>

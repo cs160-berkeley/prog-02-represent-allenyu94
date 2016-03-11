@@ -16,12 +16,12 @@ import java.nio.charset.StandardCharsets;
 public class PhoneListenerService extends WearableListenerService {
 
 //   WearableListenerServices don't need an iBinder or an onStartCommand: they just need an onMessageReceieved.
-private static final String REP = "/Barbara Lee";
+private static final String POS = "/position";
 
     @Override
     public void onMessageReceived(MessageEvent messageEvent) {
         Log.d("T", "in PhoneListenerService, got: " + messageEvent.getPath());
-        if( messageEvent.getPath().equalsIgnoreCase(REP) ) {
+        if( messageEvent.getPath().equalsIgnoreCase(POS) ) {
 
             String value = new String(messageEvent.getData(), StandardCharsets.UTF_8);
             Intent intent = new Intent(this, RepresentativeDetailActivity.class);

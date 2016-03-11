@@ -5,5 +5,10 @@
     <string name="reps_activity">Representatives Found</string>
     <string name="rep_details_activity">Representative Details</string>
 
+    <string name="google_app_id">142386113982</string>
+    <string name="sunlight_api_key">9e8d73efcd5e4e5e9efbca2cbc68cd00</string>
+    <string name="twitter_api_key">Dew0yA1vaCLFB2vXLPPvg9RI9</string>
+    <string name="twitter_secret">sBwgxV5DLM97TJc948y8L0agx29YWrS3exVZgDRBuBUqx6NQFn</string>
+
     <string name="action_settings">Settings</string>
 </resources>

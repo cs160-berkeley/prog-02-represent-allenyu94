@@ -4,6 +4,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.util.Log;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.wearable.MessageApi;
@@ -32,6 +33,7 @@ public class PhoneToWatchService extends Service {
                     @Override
                     public void onConnectionSuspended(int cause) {
                     }
+
                 })
                 .build();
     }
@@ -47,7 +49,9 @@ public class PhoneToWatchService extends Service {
         // Which cat do we want to feed? Grab this info from INTENT
         // which was passed over when we called startService
         Bundle extras = intent.getExtras();
-        final String location = extras.getString("Location");
+        //final String location = extras.getString("Location");
+        final String url = extras.getString("url");
+        final String data = extras.getString("data");
 
         // Send the message with the cat name
         new Thread(new Runnable() {
@@ -56,7 +60,7 @@ public class PhoneToWatchService extends Service {
                 //first, connect to the apiclient
                 mApiClient.connect();
                 //now that you're connected, send a massage with the cat name
-                sendMessage("/Location", location);
+                sendMessage("/Data", data);
             }
         }).start();
 
@@ -69,13 +73,16 @@ public class PhoneToWatchService extends Service {
     }
 
     private void sendMessage( final String path, final String text ) {
+        Log.e("sendMessage", path);
         //one way to send message: start a new thread and call .await()
         //see watchtophoneservice for another way to send a message
         new Thread( new Runnable() {
             @Override
             public void run() {
                 NodeApi.GetConnectedNodesResult nodes = Wearable.NodeApi.getConnectedNodes( mApiClient ).await();
+                Log.e("check node", "blah");
                 for(Node node : nodes.getNodes()) {
+                    Log.e("check node", "i am a node: ");
                     //we find 'nodes', which are nearby bluetooth devices (aka emulators)
                     //send a message for each of these nodes (just one, for an emulator)
                     MessageApi.SendMessageResult result = Wearable.MessageApi.sendMessage(

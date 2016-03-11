@@ -43,7 +43,6 @@ public class RepsFoundItemLayout extends LinearLayout implements WearableListVie
         super.onFinishInflate();
         // These are defined in the layout file for list items
         // (see next section)
-        mCircle = (ImageView) findViewById(R.id.rep_image);
         mName = (TextView) findViewById(R.id.name);
     }
 
